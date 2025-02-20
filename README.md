@@ -100,3 +100,47 @@ enter the employee address: <input type="text" name="t3" placeholder="address">
 </body>
 
 </html>
+
+
+
+
+
+
+
+<?php
+
+session_start();
+
+$en=$_POST[t1];
+
+$enum=$_POST[t2];
+
+$ead=$_POST[t3];
+
+$_SESSION[en]=$en;
+
+$_SESSION[enum]=$enum;
+
+$_SESSION[ead]=$ead;
+
+?>
+
+<html>
+
+<body>
+
+<form action="44.php" method="POST">;
+
+<<center> enter earning details </center>
+
+basic salary:<input type="text" name="e1"><br>
+DA:<input type="text" name="e2"><br>
+
+HRA:<input type="text" name="e3"><br>
+
+<input type="submit" value="click"><br>
+
+</form>
+
+</body>
+</html>
