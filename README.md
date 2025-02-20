@@ -74,3 +74,29 @@ Include("3.html")
 }
 }
 ?>
+
+
+
+<html>
+
+<body>
+
+<form action="4.php" method="PSOT">
+
+<center> ENTER THE DETAILS </center>
+
+enter the employee name:<input type="text" name="t1" placeholder="name"><br>
+
+enter the employee no: <input type="text" name="t2" placeholder="number"> <br>
+
+enter the employee address: <input type="text" name="t3" placeholder="address">
+
+<br>
+
+<input type="submit" value="click">
+
+</form>
+
+</body>
+
+</html>
