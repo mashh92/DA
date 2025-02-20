@@ -144,3 +144,33 @@ HRA:<input type="text" name="e3"><br>
 
 </body>
 </html>
+
+
+
+<?php
+
+session_start();
+
+$e1=$_POST['e1'];
+
+$e2=$_POST['e2'];
+
+$e3=$_POST['e3'];
+
+echo"<h3> employee details </h3>";
+
+echo" employee name is ".$_SESSION['en']."<br>";
+
+echo" employee number is ".$_SESSION['enum']."<br>";
+
+echo" employee address is ".$_SESSION['ead']."<br> <br>";
+
+echo "basic salary is".$e1."<br>";
+
+echo "DA is".$e2."<br>";
+
+echo "HRA is".$e3."<br>";
+
+$tot=$e1+$e2+$e2;
+
+echo total is Stor
