@@ -1,66 +1,28 @@
-
 <html>
 
-<body>
+<script type="text/javascript">
 
-3<form action="3.php" method="POST">
-
-Senter username:
-
-<input type="text" name="t1" placeholder="username"><br>
-
-enter password:
-
-<input type="text" name="t2" placeholder="password"><br>
-
-<input type="submit" value="login">
-
-</body>
-
-/htmls
-
-
-
-
-<?php
-
-session_start();
-
-if(!isset($_SESSION['cnt']))
-
-$_SESSION['cnt']=0;
-
-$username=$_POST['t1'];
-
-$password=$_POST['t2'];
-
-if($username=="" && password=="")
+function disp()
 
 {
+
+var msg=document.getElementById("t1");
+
+alert("hello "+msg.value+" exams are near you have to study");
 
 }
 
-echo"please enter ur username and password";
-
-else if($username=='ty' && password=="123456")
+function getConfirmation()
 
 {
 
-echo"login successfull";
+var ans=confirm("Do you want to continue?" );
 
-$_SESSION['cnt']=0;
-}
-else
-
-{ $_SESSION['cnt']=$_SESSION['cnt']+1;
-
-if($_SESSION['cnt']>2)
+if(ans==true)
 
 {
 
-echo("you exceed the limit");
-
-$_SESSION['cnt']=0;
+alert("hello exams are near you have to study");
 
 }
 
@@ -68,34 +30,32 @@ else
 
 {
 
-echo login failed...wrong details enterd.....attempts made".$_SESSION['cnt'];
-
-Include("3.html")
+alert("hello exams are over");
 }
+
 }
-?>
 
+function prm()
 
+{
 
-<html>
+var fname=prompt("Hello! Whats your name");
+
+alert("hello "+fname+" exams are near you have to study");
+
+}
+
+</script>
 
 <body>
 
-<form action="4.php" method="PSOT">
+<input type=text id="t1"><br>
 
-<center> ENTER THE DETAILS </center>
+<input type=submit onclick="disp()" value="alert">
 
-enter the employee name:<input type="text" name="t1" placeholder="name"><br>
+< input type=submit onclick="getConfirmation()" value="confirm">
 
-enter the employee no: <input type="text" name="t2" placeholder="number"> <br>
-
-enter the employee address: <input type="text" name="t3" placeholder="address">
-
-<br>
-
-<input type="submit" value="click">
-
-</form>
+<input type=submit onclick="prm()" value="prompt">
 
 </body>
 
@@ -107,70 +67,44 @@ enter the employee address: <input type="text" name="t3" placeholder="address">
 
 
 
-<?php
-
-session_start();
-
-$en=$_POST[t1];
-
-$enum=$_POST[t2];
-
-$ead=$_POST[t3];
-
-$_SESSION[en]=$en;
-
-$_SESSION[enum]=$enum;
-
-$_SESSION[ead]=$ead;
-
-?>
-
 <html>
+
+<head>
+
+<script type="text/javascript">
+
+function pasuser(form) {
+
+if (form.id.value=="ty") {
+
+if (form.pass.value=="bcs") {
+
+alert("welcome Login successful");
+
+} else {
+
+alert("Invalid Password");
+
+}
+} else { alert("Invalid UserID")
+
+}}
+
+</script>
+
+</head>
 
 <body>
 
-<form action="44.php" method="POST">;
+<center>
 
-<<center> enter earning details </center>
+<form name="login">
 
-basic salary:<input type="text" name="e1"><br>
-DA:<input type="text" name="e2"><br>
+Login Area <br>
+UserID: <input type="text" name="id" ><br><br>
 
-HRA:<input type="text" name="e3"><br>
+Password:<input type="password" name="pass"><br>
 
-<input type="submit" value="click"><br>
+<input type="button" value="Login"onClick="pasuser(this.form)">
 
-</form>
-
-</body>
-</html>
-
-
-
-<?php
-
-session_start();
-
-$e1=$_POST['e1'];
-
-$e2=$_POST['e2'];
-
-$e3=$_POST['e3'];
-
-echo"<h3> employee details </h3>";
-
-echo" employee name is ".$_SESSION['en']."<br>";
-
-echo" employee number is ".$_SESSION['enum']."<br>";
-
-echo" employee address is ".$_SESSION['ead']."<br> <br>";
-
-echo "basic salary is".$e1."<br>";
-
-echo "DA is".$e2."<br>";
-
-echo "HRA is".$e3."<br>";
-
-$tot=$e1+$e2+$e2;
-
-echo total is Stor
+<input type="Reset"></form></center></body>
